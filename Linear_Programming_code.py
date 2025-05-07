@@ -8,7 +8,7 @@ data = pd.read_csv('Indian_Food_Nutrition_Processed.csv')
 data = data.dropna()
 
 # Assign random price (mean ~ uniform(10,100), std dev = 10% of mean)
-data['MeanPrice'] = np.random.normal(40,4, size=len(data))
+data['MeanPrice'] = np.random.normal(80,8, size=len(data))
 data['StdPrice'] = 0.1 * data['MeanPrice']
 
 # Nutritional constraints (per day)
